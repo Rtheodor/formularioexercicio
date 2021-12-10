@@ -41,9 +41,7 @@ h1{
   padding: 5px 5px;
   display: inline-block;
   border: 0;
-  border-bottom: 2px solid #14abec
-
-  ;
+  border-bottom: 2px solid #14abec;
   background-color: transparent;
   outline: none;
   min-width: 180px;
@@ -61,7 +59,7 @@ h1{
 }
 
 .label-float input:focus{
-  border-bottom: 2px solid #4038a0;
+  border-bottom: 2px solid #14abec;
 }
 
 .label-float label{
@@ -78,7 +76,7 @@ h1{
 .label-float input:valid + label{
   font-size: 13px;
   margin-top: 0;
-  color: #4038a0
+  color: #14abec;
 }
 
 button{
