@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+
+    <form id="formulario" action="/formulario/home.html" name="formCadastro" method="POST" onsubmit="cadastrarUsuario"
+        class="container">
+
+        <div class='container'>
+            <div class='card'>
+                <h1> BANCO PAN </h1>
+
+                <div id='msgError'></div>
+                <div id='msgSuccess'></div>
+
+                <div class="label-float">
+                    <input type="text" id="nome" placeholder=" " required>
+                    <label id="labelNome" for="nome">Nome</label>
+                </div>
+
+                <div class="label-float">
+                    <input name="email" id="email" minlength="8" placeholder="" required type="email" />
+                    <label id="labelEmail" for="email">Email</label>
+                </div>
+
+                <div class="label-float">
+                    <input name="cpf" id="cpf" minlength="8" placeholder="" oninput="campoCpf(this)" required
+                        type="text" />
+                    <label id="labelCpf" for="cpf">CPF</label>
+                </div>
+
+                <div class="label-float">
+                    <input name="telefone" id="telefone" maxlength="15" placeholder="" required type="text" />
+                    <label id="lebelTelefone" for="telefone">Telefone</label>
+                </div>
+
+                <div class="justify-center">
+                    <button type="button" onclick="gravar()"> Enviar </button>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+    <script src="acao.js"></script>
+</body>
+
+</html>
