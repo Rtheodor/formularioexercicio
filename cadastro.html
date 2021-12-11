@@ -9,8 +9,7 @@
 
 <body>
 
-    <form id="formulario" action="/formulario/home.html" name="formCadastro" method="POST" onsubmit="cadastrarUsuario"
-        class="container">
+    <form id="formulario" action="editar.html" name="formulario" method="POST" class="container">
 
         <div class='container'>
             <div class='card'>
@@ -24,32 +23,28 @@
                     <label id="labelNome" for="nome">Nome</label>
                 </div>
 
-            <div class="label-float">
+                <div class="label-float">
                     <input name="email" id="email" minlength="8" placeholder="" required type="email" />
                     <label id="labelEmail" for="email">Email</label>
-            </div>
-            <div class="label-float">
-                <input type="text" id="confirmEmail" placeholder=" " required>
-                <label id="labelConfirmEmail" for="confirmEmail">Confirmar Email </label>
-                <i id="verConfirmEmail" class="fa fa-eye" aria-hidden="true"></i>
-            </div>
+                </div>
 
-            <div class="label-float">
-                <input name="cpf" id="cpf" minlength="8" placeholder="" oninput="campoCpf(this)" required type="text" />
-                <label id="labelCpf" for="cpf">CPF</label>
-            </div>
+                <div class="label-float">
+                    <input name="cpf" id="cpf" minlength="8" placeholder="" oninput="campoCpf(this)" required
+                        type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57"/>
+                    <label id="labelCpf" for="cpf">CPF</label>
+                </div>
 
-            <div class="label-float">
-                <input name="telefone" id="telefone" maxlength="15" placeholder="" required type="text" />
-                <label id="lebelTelefone" for="telefone">Telefone</label>
-            </div>
+                <div class="label-float">
+                    <input name="telefone" id="telefone" maxlength="15" placeholder="" required type="text" />
+                    <label id="lebelTelefone" for="telefone">Telefone</label>
+                </div>
 
-            <div class="justify-center">
-                <button onclick="cadastrar()"> Enviar </button>
-            </div>
+                <div class="justify-center">
+                    <button onclick="cadastrar()"> Enviar </button>
+                </div>
 
 
-        </div>
+            </div>
         </div>
     </form>
     <script src="acao.js"></script>
