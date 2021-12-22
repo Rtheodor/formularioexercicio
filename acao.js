@@ -52,6 +52,11 @@ email.addEventListener('keyup', () => {
  
 })
 
+function validateEmail(email) {
+  var email = /\S+@\S+\.\S+/;
+  return email.test(email);
+}
+
 
 //campo CPF
 cpf.addEventListener('keyup', () => {
@@ -118,13 +123,15 @@ function mtel(e) {
   return e.target.value = v;
 }
 
-//criar storage
+//criar LocalStorage
 function cadastrar() {
   if (validNome == true  && validEmail == true && validCpf == true && validTelefone == true) {
   
   // let listaUserItem = "listaUser"+Math.floor(Math.random() * 11);
 
    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
+   //const item = localStorage.getItem("item") || '[]'
+
     listaUser.push(
       {
         nomeCad: nome.value,
@@ -155,9 +162,6 @@ function cadastrar() {
   }
 
   
-  function validateEmail(email) {
-    var email = /\S+@\S+\.\S+/;
-    return email.test(email);
-  }
+  
 
   
