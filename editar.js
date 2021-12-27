@@ -86,7 +86,12 @@ for (let i in ConteudoDoCampo) {
 document.getElementById('sovai').innerHTML = table;
 
 //Ainda não mostra o telefone completo no LocalStorage e o excluir sem exito.
-function excluir(telefone) {
+
+function excluir(){
+  alert(id=telefone)
+  localStorage.removeItem(listaUser);
+}
+/*function excluir(telefone) {
   alert(telefone);
 
   let listaUser = localStorage.getItem('listaUser');
@@ -99,4 +104,4 @@ function excluir(telefone) {
       localStorage.removeItem('telefoneCad')
     }
   }
-}
+}*/
